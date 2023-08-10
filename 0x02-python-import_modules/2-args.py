@@ -12,7 +12,7 @@ def main():
     if(arg_num >= 1):
         print("{} argument{}:".format(arg_num, "" if arg_num == 1 else 's'))
 
-    for counter, argument in enumerate(args, start = 1):
+    for counter, argument in enumerate(args, start=1):
         print("{}: {}".format(counter, argument))
 
 
