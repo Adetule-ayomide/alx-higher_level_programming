@@ -12,5 +12,6 @@ def main():
         if j[0] != "_":
             print("{}".format(j), end="\n")
 
+
 if __name__ == "__main__":
     main()
