@@ -5,7 +5,7 @@ from sys import argv
 def main():
     args = len(argv) - 1
     total = 0
-
+    
     if(args == 0):
         print("{:d}".format(args))
     elif(args == 1):
@@ -13,7 +13,7 @@ def main():
     else:
         for i in argv[1:]:
             total += int(i)
-            print("{:d}".format(total))
+        print("{:d}".format(total))
 
 
 if __name__ == "__main__":
