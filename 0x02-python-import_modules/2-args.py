@@ -9,8 +9,9 @@ def main():
     else:
         print("{} argument{}:".format(len(argv) - 1, "" if len(argv) == 2 else "s"))
     
-    for counter, argument in enumerate(argv[1:], start=1):
-        print("{}: {}".format(counter, argument))
+    if(len(argv) >= 2):
+        for counter, argument in enumerate(argv[1:], start=1):
+            print("{}: {}".format(counter, argument))
 
 if __name__ == "__main__":
     main()       
