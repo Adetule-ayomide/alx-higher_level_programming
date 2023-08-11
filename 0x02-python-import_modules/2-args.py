@@ -6,7 +6,7 @@ def main():
     args = argv[1:]
     arg_num = len(args)
     if(arg_num == 0):
-        print("0 arguments.")
+        print("{} arguments.".format(0))
         return
 
     if(arg_num >= 1):
