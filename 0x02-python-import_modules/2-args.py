@@ -6,7 +6,7 @@ def main():
     arg_num = len(args)
     
     if arg_num == 0:
-        print("0 arguments.")
+        print("{:d} arguments{}".format(arg_num, '.'))
         return
     
     print("{} argument{}:".format(arg_num, "" if arg_num == 1 else "s"))
