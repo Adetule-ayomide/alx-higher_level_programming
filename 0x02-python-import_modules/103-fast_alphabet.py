@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-
-print("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+import string
+print(*list(getattr(string, '__dict__')['ascii_uppercase']), sep='')
