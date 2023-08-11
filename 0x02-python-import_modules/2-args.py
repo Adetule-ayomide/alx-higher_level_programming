@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import sys
+from sys import argv
 
 
 def main():
-    args = sys.argv[1:]
+    args = argv[1:]
     arg_num = len(args)
     if(arg_num == 0):
         print("0 arguments.")
