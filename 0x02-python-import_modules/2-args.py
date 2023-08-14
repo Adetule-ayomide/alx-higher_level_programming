@@ -11,7 +11,7 @@ def main():
     else:
         print("{} argument{}:".format(len(argv) - 1, "s"))
 
-    if(len(argv) >= 2):
+    if (len(argv) >= 2):
         for counter, argument in enumerate(argv[1:], start=1):
             print("{}: {}".format(counter, argument))
 
