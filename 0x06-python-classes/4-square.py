@@ -15,9 +15,9 @@ class Square:
         self.__size = size
 
      def size(self):
-        "To retrieve the size"
+         "To retrieve the size"
 
-        return self.__size
+         return self.__size
 
     def size(self, value):
         if not isinstance(value, int):
