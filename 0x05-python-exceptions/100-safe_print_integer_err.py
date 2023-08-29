@@ -9,4 +9,3 @@ def safe_print_integer_err(value):
     except Exception as k:
         print("Exception: {}".format(k), file=sys.stderr)
         return False
-
