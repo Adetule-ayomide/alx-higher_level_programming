@@ -7,7 +7,7 @@ class Square:
     """define a class square"""
 
     
-    def __init__(self, size=0):
+    def __init__(self, size):
         """declare a private instance attribute
 
         Args:
