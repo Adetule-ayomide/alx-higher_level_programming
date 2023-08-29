@@ -10,7 +10,8 @@ class Square:
     def __init__(self, int(size=0)):
         """declare a private instance attribute
 
-        size: the size of the square
+        Args:
+            size: the size of the square
         """
 
         self.__size = size
