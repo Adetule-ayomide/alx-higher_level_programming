@@ -35,11 +35,6 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """setter function : set values"""
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        """setter function : set values"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -74,6 +69,6 @@ class Rectangle:
         return "{}({}, {})".format(class_name, self.__width, self.__height)
 
     def __del__(self):
-        """delete rectangle"""
+        """print delete rectangle message"""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
