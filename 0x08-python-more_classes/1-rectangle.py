@@ -3,11 +3,11 @@
 
 
 class Rectangle:
-    """ represent a rectangle"""
+    """Represent a rectangle"""
 
 
     def __init__(self, width=0, height=0):
-    """  a class Rectangle that defines a rectangle by:
+    """ a class Rectangle that defines a rectangle by:
         (based on 0-rectangle.py)
         @width: width of the rectangle
         @height: height of the rectangle
@@ -22,7 +22,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """ setter function: a function that set the value"""
+        """setter function: a function that set the value"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
