@@ -3,15 +3,12 @@
 
 
 class Rectangle:
-    """Represent a rectangle"""
-
-
-    def __init__(self, width=0, height=0):
     """ a class Rectangle that defines a rectangle by:
         (based on 0-rectangle.py)
         @width: width of the rectangle
         @height: height of the rectangle
     """
+    def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
 
