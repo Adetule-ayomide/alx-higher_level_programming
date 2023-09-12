@@ -1,0 +1,25 @@
+Test Case 1: Unsorted list with duplicate elements
+
+my_list = MyList([3, 1, 4, 1, 5])
+my_list.print_sorted()  # Output: [1, 1, 3, 4, 5]
+
+# Test Case 2: Already sorted list
+my_list = MyList([1, 2, 3, 4, 5])
+my_list.print_sorted()  # Output: [1, 2, 3, 4, 5]
+
+# Test Case 3: Descending order list
+my_list = MyList([5, 4, 3, 2, 1])
+my_list.print_sorted()  # Output: [1, 2, 3, 4, 5]
+
+# Test Case 4: Empty list
+my_list = MyList([])
+my_list.print_sorted()  # Output: []
+
+# Test Case 5: List with a single element
+my_list = MyList([42])
+my_list.print_sorted()  # Output: [42]
+
+# Test Case 6: List with negative numbers
+my_list = MyList([-3, -1, -4, -2, 0])
+my_list.print_sorted()  # Output: [-4, -3, -2, -1, 0]
+
