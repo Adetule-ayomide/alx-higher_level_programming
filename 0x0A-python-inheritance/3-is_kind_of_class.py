@@ -13,8 +13,10 @@ def is_kind_of_class(obj, a_class):
     Args:
         @obj: object to check
         @a_class: instances of a class
+    Returns:
+        If obj is an instance or inherited instance of a_class - True.
+        Otherwise - False.
     """
     if isinstance(obj, a_class)
         return True
-    else:
-        return False
+    return False
