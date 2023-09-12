@@ -10,5 +10,6 @@
 
 
 def lookup(obj):
+    """function that lookup and return a list"""
     attributes_and_methods = dir(obj)
     return attributes_and_methods
