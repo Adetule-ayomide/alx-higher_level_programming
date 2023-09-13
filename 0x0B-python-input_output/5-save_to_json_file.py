@@ -9,8 +9,9 @@ import json
 
 def save_to_json_file(my_obj, filename):
     """Args:
-        @my_obj: the object
-        @filename: the name of the file
+        my_obj: the object
+        filename: the name of the file
     """
     with open(filename, "w", encoding='utf-8') as file:
-        json.dumps(my_obj, filename)
+        json_str = json.dumps(my_obj, ensure_ascii=False)
+        file.write(json_str)
