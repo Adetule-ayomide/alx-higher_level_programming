@@ -6,8 +6,8 @@
 
 def read_file(filename=""):
     """a function that reads file"""
-    with open("UTF8", "r") as filename:
+    with open("filename", "r") as file:
         file = filename.readlines()
 
     for i in file:
-        print(file)
+        print(file[i])
