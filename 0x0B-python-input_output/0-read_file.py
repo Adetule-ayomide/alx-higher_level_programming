@@ -5,9 +5,10 @@
 
 
 def read_file(filename=""):
-    """a function that reads file"""
-    with open("filename", "r") as file:
-        file = filename.readlines()
-
-    for i in file:
-        print(file[i])
+    """Args:
+        @filename: the name of the file
+        print result to the stdout
+        """
+    with open(filename, "r", encoding='utf-8') as file:
+        file = file.readline()
+        print(file)
