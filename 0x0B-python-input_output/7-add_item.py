@@ -6,6 +6,8 @@
 
 import sys
 import os
+import 5-save_to_json_file.py
+import 6-load_from_json_file.py
 
 
 if os.path.exists("add_item.json"):
