@@ -6,7 +6,13 @@
 
 
 def append_write(filename="", text=""):
-    """function that appends a string at the end of a text file"""
+    """
+    Args:
+        filename: name of the file to be written
+        text: text to be written
+        Returns:
+        number of characters written
+        """
     with open(filename, "a", encoding="utf-8") as file
     file.write(text)
     char_num = len(file)
