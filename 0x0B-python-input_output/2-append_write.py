@@ -6,7 +6,7 @@
 """
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """
     Args:
         filename: name of the file to append to
