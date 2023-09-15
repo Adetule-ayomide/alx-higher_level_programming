@@ -2,6 +2,7 @@
 
 """Defines a Rectangle subclass Square."""
 Rectangle = __import__('9-rectangle').Rectangle
+"""importing a module that has self.inter_validator"""
 
 
 class Square(Rectangle):
