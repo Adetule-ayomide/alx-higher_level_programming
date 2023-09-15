@@ -6,8 +6,10 @@
 
 
 def pascal_triangle(n):
-    tri = [];
-
+    """a function def pascal_triangle(n)
+        Args:
+            n: integer number
+    """
     if n <= 0:
         return []
     else:
