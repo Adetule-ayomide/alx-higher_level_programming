@@ -12,4 +12,3 @@ class MyInt(int):
     def __ne__(self, value):
         """override !=operator qith == behavior"""
         return super().__eq__(value)
-
