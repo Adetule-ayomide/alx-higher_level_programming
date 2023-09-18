@@ -68,6 +68,7 @@ class Rectangle(Base):
         """getter and setter for height"""
         @property
         def height(self):
+            """its return the value of height"""
             return self.__height
 
         @height.setter
@@ -88,6 +89,7 @@ class Rectangle(Base):
         """setter for x"""
         @property
         def x(self):
+            """ïts returns the value of x"""
             return self.__x
 
         @x.setter
@@ -108,6 +110,7 @@ class Rectangle(Base):
         """setter for y"""
         @property
         def y(self):
+            """ïts return the value of y"""
             return self.__y
 
         @y.setter
