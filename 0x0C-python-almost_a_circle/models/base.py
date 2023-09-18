@@ -84,7 +84,7 @@ class Base:
         Returns:
             a list of instances
         """
-        filename = f"{cls.name}.json"
+        filename = f"{cls.__name__}.json"
         instance_list = []
         if os.path.isfile(filename):
             with open(filename, "r", encoding="utf-8") as file:
@@ -94,4 +94,5 @@ class Base:
                 for dictionary in list_dictionary:
                     instance = cls.create(**dictionary)
                     instance_list.append(instance)
-        return instance_list
+            return instance_list
+
