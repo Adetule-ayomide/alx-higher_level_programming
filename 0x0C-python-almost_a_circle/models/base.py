@@ -2,6 +2,7 @@
 """
 Base class definition
 """
+import os
 import json
 
 
@@ -77,6 +78,7 @@ class Base:
         dummy_instance.update(**dictionary)
         return dummy_instance
 
+    @classmethod
     def load_from_file(cls):
         """
         Returns:
