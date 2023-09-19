@@ -95,3 +95,5 @@ class Base:
                     instance = cls.create(**dictionary)
                     instance_list.append(instance)
             return instance_list
+        else:
+            return []
