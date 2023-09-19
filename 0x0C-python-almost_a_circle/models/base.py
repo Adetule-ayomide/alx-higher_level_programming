@@ -94,6 +94,4 @@ class Base:
                 for dictionary in list_dictionary:
                     instance = cls.create(**dictionary)
                     instance_list.append(instance)
-            return instance_list
-        else:
-            return []
+        return instance_list
