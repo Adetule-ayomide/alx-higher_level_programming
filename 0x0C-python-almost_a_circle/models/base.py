@@ -139,8 +139,7 @@ class Base:
             for row in reader:
                 data_dict = {}
                 for i, value in enumerate(row):
-                    data_dict[header[i]] =
-                    int(value) if value.isdigit() else value
+                    data_dict[header[i]] = int(value) if value.isdigit() else value
                 instance = cls.create(**data_dict)
                 instance_list.append(instance)
 
