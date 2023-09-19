@@ -2,6 +2,7 @@
 """
 Base class definition
 """
+import csv
 import os
 import json
 
@@ -94,4 +95,52 @@ class Base:
                 for dictionary in list_dictionary:
                     instance = cls.create(**dictionary)
                     instance_list.append(instance)
+        return instance_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Serialize objects to a CSV file.
+        Args:
+            list_objs (list): List of instances to serialize.
+        """
+        filename = f"{cls.__name__}.csv"
+        with open(filename, mode='w', newline='') as file:
+            writer = csv.writer(file)
+
+            if cls.__name__ == 'Rectangle':
+                header = ['id', 'width', 'height', 'x', 'y']
+            elif cls.__name__ == 'Square':
+                header = ['id', 'size', 'x', 'y']
+
+            writer.writerow(header)
+
+            for obj in list_objs:
+                data = [getattr(obj, attr) for attr in header]
+                writer.writerow(data)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Deserialize objects from a CSV file.
+        Returns:
+            List of instances.
+        """
+        filename = f"{cls.__name__}.csv"
+        instance_list = []
+
+        if not os.path.isfile(filename):
+            return instance_list
+
+        with open(filename, mode='r') as file:
+            reader = csv.reader(file)
+            header = next(reader)
+
+            for row in reader:
+                data_dict = {}
+                for i, value in enumerate(row):
+                    data_dict[header[i]] = int(value) if value.isdigit() else value
+                instance = cls.create(**data_dict)
+                instance_list.append(instance)
+
         return instance_list
