@@ -2,10 +2,10 @@
 
 const argvLen = process.argv.length;
 
-if (argvLen === 2){
-	console.log('No argument');
-} else if (argvLen === 3){
-	console.log('Argument found');
+if (argvLen === 2) {
+  console.log('No argument');
+} else if (argvLen === 3) {
+  console.log('Argument found');
 } else {
-	console.log('Arguments found');
+  console.log('Arguments found');
 }
