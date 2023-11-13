@@ -7,5 +7,5 @@ if (argvLen === 2){
 } else if (argvLen === 3){
 	console.log('Argument found');
 } else {
-	console.log('Argument found');
+	console.log('Arguments found');
 }
