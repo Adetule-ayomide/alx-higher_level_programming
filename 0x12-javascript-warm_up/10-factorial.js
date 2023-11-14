@@ -3,7 +3,7 @@
 const firstArgs = process.argv.slice(2);
 const numb = Number(firstArgs[0]);
 
-function factorial(n) {
+function factorial (n) {
   if (isNaN(n) || n < 0) {
     return 1;
   } else if (n === 0 || n === 1) {
