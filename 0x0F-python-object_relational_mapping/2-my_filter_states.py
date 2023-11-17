@@ -15,14 +15,14 @@ def main():
     user = sys.argv[1]
     passwd = sys.argv[2]
     db = sys.argv[3]
-    state = sys.argv[4]
+    state_name = sys.argv[4]
 
     db = MySQLdb.connect(host=host, user=user, passwd=passwd, db=db, port=port)
     cursor = db.cursor()
     cursor.execute("""
                     SELECT * FROM states
                     WHERE name LIKE %s
-                    ORDER BY id ASC""", (state,))
+                    ORDER BY id ASC""", (state_name,))
 
     states = cursor.fetchall()
 
