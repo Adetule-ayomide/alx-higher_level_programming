@@ -21,8 +21,8 @@ def main():
     cursor = db.cursor()
     cursor.execute("""
                     SELECT * FROM states
-                    WHERE name LIKE %s
-                    ORDER BY id ASC""", (state_name,))
+                    WHERE name LIKE '{}'
+                    ORDER BY id ASC""".format(state_name,))
 
     states = cursor.fetchall()
 
