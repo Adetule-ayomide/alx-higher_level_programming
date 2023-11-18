@@ -17,7 +17,7 @@ def main():
     db = sys.argv[3]
 
     engine = create_engine("mysql+mysqldb://{}:{}@{}:{}/{}"
-                            .format(user, passwd, host, port, db))
+                           .format(user, passwd, host, port, db))
 
     Session = sessionmaker(bind=engine)
     session = Session()
