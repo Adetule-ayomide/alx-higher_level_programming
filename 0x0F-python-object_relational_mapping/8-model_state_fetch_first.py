@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-"""a script that print the firdt  State objects from the database hbtn_0e_6_usa"""
+"""a script that print the first
+    State objects from the database hbtn_0e_6_usa"""
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -17,7 +18,7 @@ def main():
     db = sys.argv[3]
 
     engine = create_engine("mysql+mysqldb://{}:{}@{}:{}/{}"
-                            .format(user, passwd, host, port, db))
+                           .format(user, passwd, host, port, db))
 
     Session = sessionmaker(bind=engine)
     session = Session()
@@ -29,6 +30,6 @@ def main():
 
     session.close()
 
+
 if __name__ == "__main__":
     main()
-
