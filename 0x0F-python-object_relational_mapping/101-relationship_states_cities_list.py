@@ -6,7 +6,8 @@
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-
+from relationship_state import State
+from relationship_city import City
 
 def main():
     """A function that list state"""
@@ -17,7 +18,7 @@ def main():
     db = sys.argv[3]
 
     engine = create_engine('mysql+mysqldb://{}:{]@{}:{]/{]'
-                           .format(user, passwd, host, port, db))
+                           .format(user, passwd, host, port, db), pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
     session = Session()
