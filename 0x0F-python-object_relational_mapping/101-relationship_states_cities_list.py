@@ -9,6 +9,7 @@ from sqlalchemy.orm import sessionmaker
 from relationship_state import State
 from relationship_city import City
 
+
 def main():
     """A function that list state"""
     host = "localhost"
@@ -17,8 +18,8 @@ def main():
     passwd = sys.argv[2]
     db = sys.argv[3]
 
-    engine = create_engine('mysql+mysqldb://{}:{]@{}:{]/{]'
-                           .format(user, passwd, host, port, db), pool_pre_ping=True)
+    engine = create_engine("mysql+mysqldb://{}:{}@{}:{}/{}".format(
+        user, pswd, host, port, db), pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
     session = Session()
