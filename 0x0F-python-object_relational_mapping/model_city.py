@@ -8,6 +8,7 @@ from model_state import Base
 
 Base = declarative_base()
 
+
 class City(Base):
     """Ä class City"""
     __tablename__ = "cities"
