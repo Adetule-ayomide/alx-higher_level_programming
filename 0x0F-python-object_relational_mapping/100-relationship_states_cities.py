@@ -7,7 +7,7 @@ import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from relationship_city import City
-from relationship_state import State
+from relationship_state import State, Base
 
 
 def main():
@@ -21,6 +21,7 @@ def main():
     engine = create_engine('mysql+mysqldb://{}:{}@{}:{}/{}'
                            .format(user, passwd, host, port, db))
 
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
