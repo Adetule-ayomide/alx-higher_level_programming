@@ -27,7 +27,7 @@ def main():
         City.state_id == State.id).order_by(City.id)
 
     for city, state in cities:
-        print("{}: {} {}".format(state.name, city.id, city.name))
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.close()
 
