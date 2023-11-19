@@ -27,6 +27,8 @@ def main():
 
     if first_state:
         print('{}: {}'.format(first_state.id, first_state.name))
+    else:
+        print("Nothing")
 
     session.close()
 
