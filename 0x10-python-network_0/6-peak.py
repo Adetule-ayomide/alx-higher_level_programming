@@ -10,6 +10,9 @@ def find_peak(list_of_integers):
     max_number = max(list_of_integers)
     max_index = list_of_integers.index(max_number)
 
+    if len(list_of_integers) == 1:
+        return max_number
+
     if len(list_of_integers) >= 2:
         if max_index == 0 or max_index == len(list_of_integers) - 1:
             return max_number
