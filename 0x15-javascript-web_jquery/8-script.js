@@ -11,3 +11,4 @@ $.ajax({
 			$ul.append('<li>' + movie.title + '</li>');
 		});
 	};
+});
